@@ -70,7 +70,12 @@ WSGI_APPLICATION = 'cruddemo.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.parse(os.getenv('DATABASE_URL'))
+        'ENGINE': 'django.db.backends.mysql',#MySQL engine will be used as the db engine
+	    'NAME': 'srishtic_cruddemo',#Name of the database created for this project
+	    'USER': 'cruddemo_user',#Enter your mysql username
+	    'PASSWORD': 'cruddemo_user',#Enter your mysql password
+	    'HOST': 'localhost',
+	    'PORT': '3306',
 }
 
 
