@@ -76,6 +76,9 @@ DATABASES = {
 	    'PASSWORD': 'cruddemo_user',#Enter your mysql password
 	    'HOST': 'localhost',
 	    'PORT': '3306',
+        'OPTIONS': {
+          'autocommit': True,
+        },
 }
 
 
