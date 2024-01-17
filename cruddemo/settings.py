@@ -70,7 +70,11 @@ WSGI_APPLICATION = 'cruddemo.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-        'ENGINE': 'mysql.connector.django',#MySQL engine will be used as the db engine
+         'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+       'new':{'ENGINE': 'mysql.connector.django',#MySQL engine will be used as the db engine
 	    'NAME': 'srishtic_cruddemo',#Name of the database created for this project
 	    'USER': 'cruddemo_user',#Enter your mysql username
 	    'PASSWORD': 'cruddemo_user',#Enter your mysql password
@@ -79,6 +83,7 @@ DATABASES = {
         'OPTIONS': {
           'autocommit': True,
         },
+        }
 }
 
 
